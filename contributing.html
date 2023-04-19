@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Contributing</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/design-tabs.js"></script>
+    <link rel="icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Changelog" href="changes.html" />
+    <link rel="prev" title="Usage" href="usage.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="contributing">
+<h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading">¶</a></h1>
+<p>Welcome to the Django Ecommerce API demo, and thank you for your interest in contributing! This guide will help you get started.</p>
+<p>This guide is chiefly for users wishing to contribute to the opensource version of this tutorial. Those who want just to use the project to suit their own purposes should look at <a class="reference internal" href="#USAGE.md"><span class="xref myst">USAGE</span></a>, but may find some sections useful.</p>
+<section id="links-to-important-resources">
+<h2>Links to Important Resources<a class="headerlink" href="#links-to-important-resources" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.pytest.org">pytest</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/unittest.mock.html">unittest.mock</a></p></li>
+<li><p><a class="reference external" href="https://pdm.fming.dev">pdm</a></p></li>
+<li><p><a class="reference external" href="https://black.readthedocs.io/en/stable/">black</a></p></li>
+<li><p><a class="reference external" href="https://flake8.pycqa.org/en/latest/">flake8</a></p></li>
+<li><p><a class="reference external" href="https://pre-commit.com">pre-commit</a></p></li>
+<li><p><a class="reference external" href="https://commitizen-tools.github.io/commitizen/">commitizen</a></p></li>
+</ul>
+</section>
+<section id="python-code-guidelines">
+<h2>Python code guidelines<a class="headerlink" href="#python-code-guidelines" title="Permalink to this heading">¶</a></h2>
+<section id="code-linting-and-formatting">
+<h3>Code linting and formatting<a class="headerlink" href="#code-linting-and-formatting" title="Permalink to this heading">¶</a></h3>
+<p>We use linting to highlight problems in our Python code which could later produce errors or affect efficiency. For example, linting detects things such as uninitialised or undefined variables, unused imported modules, and missing parentheses. To detect and enact fixes to these problems, we make use of the Python linter: <a class="reference external" href="https://flake8.pycqa.org/en/latest/">Flake8</a> and the formatter <a class="reference external" href="https://black.readthedocs.io/en/stable/">Black</a>. These are run as part of our <a class="reference internal" href="#Pre-commit-checks"><span class="xref myst">pre-commit checks</span></a>. We have some configurations for Flake8 that you can find <a class="reference internal" href="#pyproject.toml"><span class="xref myst">here</span></a>.</p>
+</section>
+<section id="docstring-format">
+<h3>Docstring format<a class="headerlink" href="#docstring-format" title="Permalink to this heading">¶</a></h3>
+<p>Please include docstrings that are compliant with the <a class="reference external" href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html">Google Style</a>.</p>
+<p>In brief, the docstring is a triple quoted string placed immediately after the function definition and should contain:</p>
+<ul class="simple">
+<li><p>A brief description of the function</p></li>
+<li><p>A section <code class="docutils literal notranslate"><span class="pre">Args:</span></code> where you list the function arguments</p>
+<ul>
+<li><p>For each argument, include the argument type in brackets</p></li>
+</ul>
+</li>
+<li><p>A section <code class="docutils literal notranslate"><span class="pre">Returns:</span></code> where you list what the function returns</p>
+<ul>
+<li><p>For each returned item, include the type</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">¶</a></h2>
+<p>Testing is an important way for us to check that our code works as expected and forms a key part of our CI/CD strategy. For example, pull requests will not pass our checks if any unit tests fail. You should therefore ensure that your pull request passes all tests before merging.</p>
+<section id="unit-tests">
+<h3>Unit Tests<a class="headerlink" href="#unit-tests" title="Permalink to this heading">¶</a></h3>
+<p>We use unit tests to test small sections of logically isolated code in our pipeline components.</p>
+<section id="mocking-patching">
+<h4>Mocking &amp; patching<a class="headerlink" href="#mocking-patching" title="Permalink to this heading">¶</a></h4>
+<p>When we test a function that makes an external API call (for example to a service on GCP), we mock the associated module or class and its functions and attributes. The rationale behind this is that we want to test our own logic and not the API call(s) themselves. Indeed, API calls can be broken, computationally expensive, slow, or limited, and we do not want our unit tests to fail because of any of these. Instead, we want to test that our code behaves as expected when the API call is successful or fails.</p>
+</section>
+<section id="how-to-write-unit-tests">
+<h4>How to write unit tests<a class="headerlink" href="#how-to-write-unit-tests" title="Permalink to this heading">¶</a></h4>
+<p>Some things to consider testing for in your code:</p>
+<ul class="simple">
+<li><p><strong>Do you have any logical conditions?</strong> Consider writing tests that assert the desired outcome occurs for each possible outcome. In particular, you can assert that a certain error is raised in your function under certain conditions. For example, considering a function named <code class="docutils literal notranslate"><span class="pre">get_configuration</span></code> raises a <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code> if no configuration are found:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">fail_on_configuration_not_found</span><span class="p">:</span>
+  <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;Failed as configuration not found.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now in <code class="docutils literal notranslate"><span class="pre">test_configuration.py</span></code>, in the unit test <code class="docutils literal notranslate"><span class="pre">test_get_configuration_when_no_config_fail</span></code> you can use <code class="docutils literal notranslate"><span class="pre">pytest.raises</span></code> to check that <code class="docutils literal notranslate"><span class="pre">get_configuration</span></code> actually raises a <code class="docutils literal notranslate"><span class="pre">RuntimeError</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">RuntimeError</span><span class="p">):</span>
+  <span class="n">get_configuration</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="how-to-run-unit-tests">
+<h4>How to run unit tests<a class="headerlink" href="#how-to-run-unit-tests" title="Permalink to this heading">¶</a></h4>
+<p>Unit tests for pipeline components are run automatically on each pull request. You can also run them on your local machine:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pdm<span class="w"> </span>run<span class="w"> </span>tests
+</pre></div>
+</div>
+<p>Or just use <code class="docutils literal notranslate"><span class="pre">pytest</span></code> directly:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="adding-or-changing-python-dependencies">
+<h2>Adding or changing python dependencies<a class="headerlink" href="#adding-or-changing-python-dependencies" title="Permalink to this heading">¶</a></h2>
+<p>We use <a class="reference external" href="https://pdm.fming.dev/">pdm</a> to handle our packages and their dependencies.</p>
+<section id="adding-python-dependencies">
+<h3>Adding python dependencies<a class="headerlink" href="#adding-python-dependencies" title="Permalink to this heading">¶</a></h3>
+<p>You may need to add new packages for your own use cases. To do this, run pdm add. If you are adding a package that should be used just in development, add the <code class="docutils literal notranslate"><span class="pre">--dev</span></code> flag.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pdm<span class="w"> </span>add<span class="w"> </span>&lt;package<span class="w"> </span>name&gt;
+</pre></div>
+</div>
+</section>
+</section>
+<section id="committing-changes">
+<h2>Committing Changes<a class="headerlink" href="#committing-changes" title="Permalink to this heading">¶</a></h2>
+<section id="add-changed-files-to-staging-area">
+<h3>Add changed files to staging area<a class="headerlink" href="#add-changed-files-to-staging-area" title="Permalink to this heading">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>&lt;path<span class="o">(</span>s<span class="o">)</span><span class="w"> </span>of<span class="w"> </span>changed<span class="w"> </span>file<span class="o">(</span>s<span class="o">)</span>&gt;
+</pre></div>
+</div>
+</section>
+<section id="commit-messages">
+<h3>Commit messages<a class="headerlink" href="#commit-messages" title="Permalink to this heading">¶</a></h3>
+<p>To allow others (and yourself!) to understand your changes easily, we encourage writing detailed commit messages. We use <a class="reference external" href="https://commitizen-tools.github.io/commitizen/">Commitizen</a> as a guide. In brief, all commit messages should start with one of the following prefixes:</p>
+<ul class="simple">
+<li><p><strong>feat</strong>: A new feature</p></li>
+<li><p><strong>fix</strong>: A bug fix</p></li>
+<li><p><strong>docs</strong>: Documentation only changes</p></li>
+<li><p><strong>style</strong>: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons etc)</p></li>
+<li><p><strong>refactor</strong>: A change that neither fixes a bug or adds a feature</p></li>
+<li><p><strong>perf</strong>: A change that improves performance</p></li>
+<li><p><strong>test</strong>: Add new tests or correct existing tests</p></li>
+<li><p><strong>build</strong>: Changes that affect the build system or external dependencies (e.g. pip, docker, npm)</p></li>
+<li><p><strong>ci</strong>: Changes to CI configuration files and scripts</p></li>
+</ul>
+<p>After the prefix, you can specify the scope (e.g. the class or file name) of the change in brackets. Finally, you include the details of the change. For example</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>commit<span class="w"> </span>-s<span class="w"> </span>-m<span class="s2">&quot;prefix(scope): message here&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="things-to-avoid-in-your-commit-messages">
+<h3>Things to avoid in your commit messages:<a class="headerlink" href="#things-to-avoid-in-your-commit-messages" title="Permalink to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>Too brief or non-specific messages (e.g. <code class="docutils literal notranslate"><span class="pre">bug</span> <span class="pre">fix</span></code>, <code class="docutils literal notranslate"><span class="pre">small</span> <span class="pre">changes</span></code>)</p></li>
+<li><p>Commit message does not explain why changes were made</p></li>
+</ul>
+</section>
+<section id="pre-commit-checks">
+<h3>Pre-commit checks<a class="headerlink" href="#pre-commit-checks" title="Permalink to this heading">¶</a></h3>
+<p>We use pre-commit hooks to automatically identify and correct issues in code. You can find the details of the hooks we use <a class="reference internal" href="#.pre-commit-config.yaml"><span class="xref myst">here</span></a>. If any of these fail, the commit will be unsuccessful and you will be able to see which hook failed and some additional details in your terminal.</p>
+<p>To run the pre-commit hooks over the entire repo, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>pre-commit
+</pre></div>
+</div>
+<section id="what-to-do-if-pre-commit-checks-fail">
+<h4>What to do if pre-commit checks fail:<a class="headerlink" href="#what-to-do-if-pre-commit-checks-fail" title="Permalink to this heading">¶</a></h4>
+<ul class="simple">
+<li><p><strong>Checks fail and the pre-commit hook edits a file to fix the error</strong>. Sometimes the pre-commit hook will identify an error (e.g. the absence of a blank line at the end of a file), and will correct this automatically by changing your file. You will then need to re-add these files to the staging area before trying to commit again.</p></li>
+<li><p><strong>Checks fail and displays an error message</strong>. Some errors cannot be automatically fixed by pre-commit hooks, and instead they will display the error number and the file and line which failed. For more details beyond the error message, you can look up the error number online. The most common errors are caused by lines which exceed the character limit. Once you identify the cause of the error, you will need to fix this in your code, add the edited file to the staging area, and then commit again.</p></li>
+</ul>
+</section>
+</section>
+<section id="commit-changes-to-python-packages-and-dependencies">
+<h3>Commit changes to Python packages and dependencies<a class="headerlink" href="#commit-changes-to-python-packages-and-dependencies" title="Permalink to this heading">¶</a></h3>
+<p>If you have changes to <code class="docutils literal notranslate"><span class="pre">Pipfile</span></code> and <code class="docutils literal notranslate"><span class="pre">Pipfile.lock</span></code>, please make sure you commit these files!</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo-bar.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="index.html">Django DRF E-Commerce</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#links-to-important-resources">Links to Important Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-code-guidelines">Python code guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-or-changing-python-dependencies">Adding or changing python dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#committing-changes">Committing Changes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/modules.html">Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="usage.html" title="previous chapter">Usage</a></li>
+      <li>Next: <a href="changes.html" title="next chapter">Changelog</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Vinicius Cadore.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.1.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/contributing.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

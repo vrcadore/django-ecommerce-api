@@ -1,0 +1,682 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>ecommerce.products.tests package</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/design-tabs.js"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ecommerce.users package" href="ecommerce.users.html" />
+    <link rel="prev" title="ecommerce.products.migrations package" href="ecommerce.products.migrations.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="ecommerce-products-tests-package">
+<h1>ecommerce.products.tests package<a class="headerlink" href="#ecommerce-products-tests-package" title="Permalink to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-ecommerce.products.tests.factories">
+<span id="ecommerce-products-tests-factories-module"></span><h2>ecommerce.products.tests.factories module<a class="headerlink" href="#module-ecommerce.products.tests.factories" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.AttributeFactory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.factories.</span></span><span class="sig-name descname"><span class="pre">AttributeFactory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.factories.AttributeFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DjangoModelFactory</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.AttributeFactory.created_by">
+<span class="sig-name descname"><span class="pre">created_by</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.SubFactory</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.AttributeFactory.created_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.AttributeFactory.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.faker.Faker</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.AttributeFactory.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.AttributeFactory.is_active">
+<span class="sig-name descname"><span class="pre">is_active</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.AttributeFactory.is_active" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.AttributeFactory.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.Sequence</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.AttributeFactory.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.AttributeFactory.slug">
+<span class="sig-name descname"><span class="pre">slug</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.Sequence</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.AttributeFactory.slug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.AttributeFactory.updated_by">
+<span class="sig-name descname"><span class="pre">updated_by</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SelfAttribute('created_by',</span> <span class="pre">default=&lt;class</span> <span class="pre">'factory.declarations._UNSPECIFIED'&gt;)&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.AttributeFactory.updated_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.BrandFactory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.factories.</span></span><span class="sig-name descname"><span class="pre">BrandFactory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.factories.BrandFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DjangoModelFactory</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.BrandFactory.created_by">
+<span class="sig-name descname"><span class="pre">created_by</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.SubFactory</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.BrandFactory.created_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.BrandFactory.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.faker.Faker</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.BrandFactory.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.BrandFactory.is_active">
+<span class="sig-name descname"><span class="pre">is_active</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.BrandFactory.is_active" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.BrandFactory.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.Sequence</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.BrandFactory.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.BrandFactory.slug">
+<span class="sig-name descname"><span class="pre">slug</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.Sequence</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.BrandFactory.slug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.BrandFactory.updated_by">
+<span class="sig-name descname"><span class="pre">updated_by</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SelfAttribute('created_by',</span> <span class="pre">default=&lt;class</span> <span class="pre">'factory.declarations._UNSPECIFIED'&gt;)&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.BrandFactory.updated_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.CategoryFactory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.factories.</span></span><span class="sig-name descname"><span class="pre">CategoryFactory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.factories.CategoryFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DjangoModelFactory</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.CategoryFactory.created_by">
+<span class="sig-name descname"><span class="pre">created_by</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.SubFactory</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.CategoryFactory.created_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.CategoryFactory.depth">
+<span class="sig-name descname"><span class="pre">depth</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.CategoryFactory.depth" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.CategoryFactory.is_active">
+<span class="sig-name descname"><span class="pre">is_active</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.CategoryFactory.is_active" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.CategoryFactory.lft">
+<span class="sig-name descname"><span class="pre">lft</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.CategoryFactory.lft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.CategoryFactory.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.Sequence</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.CategoryFactory.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.CategoryFactory.rgt">
+<span class="sig-name descname"><span class="pre">rgt</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.CategoryFactory.rgt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.CategoryFactory.slug">
+<span class="sig-name descname"><span class="pre">slug</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.Sequence</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.CategoryFactory.slug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.CategoryFactory.tree_id">
+<span class="sig-name descname"><span class="pre">tree_id</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.faker.Faker</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.CategoryFactory.tree_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.CategoryFactory.updated_by">
+<span class="sig-name descname"><span class="pre">updated_by</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SelfAttribute('created_by',</span> <span class="pre">default=&lt;class</span> <span class="pre">'factory.declarations._UNSPECIFIED'&gt;)&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.CategoryFactory.updated_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductAttributeFactory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.factories.</span></span><span class="sig-name descname"><span class="pre">ProductAttributeFactory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.factories.ProductAttributeFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DjangoModelFactory</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductAttributeFactory.attribute">
+<span class="sig-name descname"><span class="pre">attribute</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.SubFactory</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductAttributeFactory.attribute" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductAttributeFactory.created_by">
+<span class="sig-name descname"><span class="pre">created_by</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.SubFactory</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductAttributeFactory.created_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductAttributeFactory.product_line">
+<span class="sig-name descname"><span class="pre">product_line</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.SubFactory</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductAttributeFactory.product_line" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductAttributeFactory.updated_by">
+<span class="sig-name descname"><span class="pre">updated_by</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SelfAttribute('created_by',</span> <span class="pre">default=&lt;class</span> <span class="pre">'factory.declarations._UNSPECIFIED'&gt;)&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductAttributeFactory.updated_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductAttributeFactory.value">
+<span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.faker.Faker</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductAttributeFactory.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductFactory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.factories.</span></span><span class="sig-name descname"><span class="pre">ProductFactory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.factories.ProductFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DjangoModelFactory</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductFactory.brand">
+<span class="sig-name descname"><span class="pre">brand</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.SubFactory</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductFactory.brand" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductFactory.category">
+<span class="sig-name descname"><span class="pre">category</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.SubFactory</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductFactory.category" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductFactory.created_by">
+<span class="sig-name descname"><span class="pre">created_by</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SelfAttribute('owner',</span> <span class="pre">default=&lt;class</span> <span class="pre">'factory.declarations._UNSPECIFIED'&gt;)&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductFactory.created_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductFactory.description">
+<span class="sig-name descname"><span class="pre">description</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.faker.Faker</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductFactory.description" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductFactory.images">
+<span class="sig-name descname"><span class="pre">images</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ecommerce.utils.factories.RelatedFactoryVariableList</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductFactory.images" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductFactory.is_active">
+<span class="sig-name descname"><span class="pre">is_active</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductFactory.is_active" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductFactory.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.Sequence</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductFactory.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductFactory.owner">
+<span class="sig-name descname"><span class="pre">owner</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.SubFactory</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductFactory.owner" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductFactory.product_lines">
+<span class="sig-name descname"><span class="pre">product_lines</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ecommerce.utils.factories.RelatedFactoryVariableList</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductFactory.product_lines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductFactory.slug">
+<span class="sig-name descname"><span class="pre">slug</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.Sequence</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductFactory.slug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductFactory.updated_by">
+<span class="sig-name descname"><span class="pre">updated_by</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SelfAttribute('owner',</span> <span class="pre">default=&lt;class</span> <span class="pre">'factory.declarations._UNSPECIFIED'&gt;)&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductFactory.updated_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductImageFactory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.factories.</span></span><span class="sig-name descname"><span class="pre">ProductImageFactory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.factories.ProductImageFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DjangoModelFactory</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductImageFactory.alt_text">
+<span class="sig-name descname"><span class="pre">alt_text</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.faker.Faker</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductImageFactory.alt_text" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductImageFactory.created_by">
+<span class="sig-name descname"><span class="pre">created_by</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.SubFactory</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductImageFactory.created_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductImageFactory.image">
+<span class="sig-name descname"><span class="pre">image</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.django.ImageField</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductImageFactory.image" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductImageFactory.product">
+<span class="sig-name descname"><span class="pre">product</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.SubFactory</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductImageFactory.product" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductImageFactory.updated_by">
+<span class="sig-name descname"><span class="pre">updated_by</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SelfAttribute('created_by',</span> <span class="pre">default=&lt;class</span> <span class="pre">'factory.declarations._UNSPECIFIED'&gt;)&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductImageFactory.updated_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductLineFactory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.factories.</span></span><span class="sig-name descname"><span class="pre">ProductLineFactory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.factories.ProductLineFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">DjangoModelFactory</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductLineFactory.attributes">
+<span class="sig-name descname"><span class="pre">attributes</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;ecommerce.utils.factories.RelatedFactoryVariableList</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductLineFactory.attributes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductLineFactory.created_by">
+<span class="sig-name descname"><span class="pre">created_by</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.SubFactory</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductLineFactory.created_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductLineFactory.is_active">
+<span class="sig-name descname"><span class="pre">is_active</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">True</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductLineFactory.is_active" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductLineFactory.price">
+<span class="sig-name descname"><span class="pre">price</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.faker.Faker</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductLineFactory.price" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductLineFactory.product">
+<span class="sig-name descname"><span class="pre">product</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.declarations.SubFactory</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductLineFactory.product" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductLineFactory.sku">
+<span class="sig-name descname"><span class="pre">sku</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.faker.Faker</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductLineFactory.sku" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductLineFactory.stock_quantity">
+<span class="sig-name descname"><span class="pre">stock_quantity</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;factory.faker.Faker</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductLineFactory.stock_quantity" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ecommerce.products.tests.factories.ProductLineFactory.updated_by">
+<span class="sig-name descname"><span class="pre">updated_by</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;SelfAttribute('created_by',</span> <span class="pre">default=&lt;class</span> <span class="pre">'factory.declarations._UNSPECIFIED'&gt;)&gt;</span></em><a class="headerlink" href="#ecommerce.products.tests.factories.ProductLineFactory.updated_by" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ecommerce.products.tests.test_admin">
+<span id="ecommerce-products-tests-test-admin-module"></span><h2>ecommerce.products.tests.test_admin module<a class="headerlink" href="#module-ecommerce.products.tests.test_admin" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestBrandAdmin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.test_admin.</span></span><span class="sig-name descname"><span class="pre">TestBrandAdmin</span></span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestBrandAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Test cases for Brand Administration Pages and Actions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestBrandAdmin.test_add">
+<span class="sig-name descname"><span class="pre">test_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brand_factory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ecommerce.products.tests.factories.BrandFactory" title="ecommerce.products.tests.factories.BrandFactory"><span class="pre">BrandFactory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.users.html#ecommerce.users.models.User" title="ecommerce.users.models.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestBrandAdmin.test_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the add page is accessible and the add action is working.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestBrandAdmin.test_changelist">
+<span class="sig-name descname"><span class="pre">test_changelist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestBrandAdmin.test_changelist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the changelist page is accessible.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestBrandAdmin.test_delete">
+<span class="sig-name descname"><span class="pre">test_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brand</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Brand" title="ecommerce.products.models.Brand"><span class="pre">Brand</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestBrandAdmin.test_delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the delete action is disabled.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestBrandAdmin.test_edit">
+<span class="sig-name descname"><span class="pre">test_edit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brand</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Brand" title="ecommerce.products.models.Brand"><span class="pre">Brand</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.users.html#ecommerce.users.models.User" title="ecommerce.users.models.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestBrandAdmin.test_edit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the edit page is accessible and the edit action is working.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestBrandAdmin.test_make_active">
+<span class="sig-name descname"><span class="pre">test_make_active</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brand</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Brand" title="ecommerce.products.models.Brand"><span class="pre">Brand</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.users.html#ecommerce.users.models.User" title="ecommerce.users.models.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestBrandAdmin.test_make_active" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the make_active action is working.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestBrandAdmin.test_make_inactive">
+<span class="sig-name descname"><span class="pre">test_make_inactive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brand</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Brand" title="ecommerce.products.models.Brand"><span class="pre">Brand</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.users.html#ecommerce.users.models.User" title="ecommerce.users.models.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestBrandAdmin.test_make_inactive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the make_inactive action is working.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestBrandAdmin.test_search">
+<span class="sig-name descname"><span class="pre">test_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestBrandAdmin.test_search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the search is working.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestBrandAdmin.test_view_user">
+<span class="sig-name descname"><span class="pre">test_view_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brand</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Brand" title="ecommerce.products.models.Brand"><span class="pre">Brand</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestBrandAdmin.test_view_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the view page is accessible.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestCategoryAdmin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.test_admin.</span></span><span class="sig-name descname"><span class="pre">TestCategoryAdmin</span></span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestCategoryAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Test cases for Category Administration Pages and Actions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestCategoryAdmin.test_add">
+<span class="sig-name descname"><span class="pre">test_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category_factory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ecommerce.products.tests.factories.CategoryFactory" title="ecommerce.products.tests.factories.CategoryFactory"><span class="pre">CategoryFactory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Category" title="ecommerce.products.models.Category"><span class="pre">Category</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.users.html#ecommerce.users.models.User" title="ecommerce.users.models.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestCategoryAdmin.test_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the add page is accessible and the category is created.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestCategoryAdmin.test_changelist">
+<span class="sig-name descname"><span class="pre">test_changelist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestCategoryAdmin.test_changelist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the changelist page is accessible.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestCategoryAdmin.test_delete">
+<span class="sig-name descname"><span class="pre">test_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Category" title="ecommerce.products.models.Category"><span class="pre">Category</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestCategoryAdmin.test_delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the delete page is not accessible.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestCategoryAdmin.test_edit">
+<span class="sig-name descname"><span class="pre">test_edit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Category" title="ecommerce.products.models.Category"><span class="pre">Category</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.users.html#ecommerce.users.models.User" title="ecommerce.users.models.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestCategoryAdmin.test_edit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the edit page is accessible and the category is updated.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestCategoryAdmin.test_make_active">
+<span class="sig-name descname"><span class="pre">test_make_active</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Category" title="ecommerce.products.models.Category"><span class="pre">Category</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.users.html#ecommerce.users.models.User" title="ecommerce.users.models.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestCategoryAdmin.test_make_active" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the make_active action is working.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestCategoryAdmin.test_make_inactive">
+<span class="sig-name descname"><span class="pre">test_make_inactive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Category" title="ecommerce.products.models.Category"><span class="pre">Category</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.users.html#ecommerce.users.models.User" title="ecommerce.users.models.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestCategoryAdmin.test_make_inactive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the make_inactive action is working.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestCategoryAdmin.test_search">
+<span class="sig-name descname"><span class="pre">test_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestCategoryAdmin.test_search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the search is working.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestCategoryAdmin.test_view_user">
+<span class="sig-name descname"><span class="pre">test_view_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Category" title="ecommerce.products.models.Category"><span class="pre">Category</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestCategoryAdmin.test_view_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the view page is accessible.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestProductAdmin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.test_admin.</span></span><span class="sig-name descname"><span class="pre">TestProductAdmin</span></span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestProductAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Test cases for Product Administration Pages and Actions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestProductAdmin.test_add">
+<span class="sig-name descname"><span class="pre">test_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_factory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#ecommerce.products.tests.factories.ProductFactory" title="ecommerce.products.tests.factories.ProductFactory"><span class="pre">ProductFactory</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">brand</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Brand" title="ecommerce.products.models.Brand"><span class="pre">Brand</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Category" title="ecommerce.products.models.Category"><span class="pre">Category</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.users.html#ecommerce.users.models.User" title="ecommerce.users.models.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestProductAdmin.test_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the add page is accessible and the product is created.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestProductAdmin.test_changelist">
+<span class="sig-name descname"><span class="pre">test_changelist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestProductAdmin.test_changelist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the changelist page is accessible.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestProductAdmin.test_delete">
+<span class="sig-name descname"><span class="pre">test_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Product" title="ecommerce.products.models.Product"><span class="pre">Product</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestProductAdmin.test_delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the delete page is accessible and the product is deleted.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestProductAdmin.test_edit">
+<span class="sig-name descname"><span class="pre">test_edit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Product" title="ecommerce.products.models.Product"><span class="pre">Product</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.users.html#ecommerce.users.models.User" title="ecommerce.users.models.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestProductAdmin.test_edit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the edit page is accessible and the product is updated.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestProductAdmin.test_make_active">
+<span class="sig-name descname"><span class="pre">test_make_active</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Product" title="ecommerce.products.models.Product"><span class="pre">Product</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.users.html#ecommerce.users.models.User" title="ecommerce.users.models.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestProductAdmin.test_make_active" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the make_active action is working.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestProductAdmin.test_make_inactive">
+<span class="sig-name descname"><span class="pre">test_make_inactive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Product" title="ecommerce.products.models.Product"><span class="pre">Product</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.users.html#ecommerce.users.models.User" title="ecommerce.users.models.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestProductAdmin.test_make_inactive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the make_inactive action is working.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestProductAdmin.test_search">
+<span class="sig-name descname"><span class="pre">test_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestProductAdmin.test_search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the search is working.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestProductAdmin.test_view_user">
+<span class="sig-name descname"><span class="pre">test_view_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Product" title="ecommerce.products.models.Product"><span class="pre">Product</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestProductAdmin.test_view_user" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the view user page is accessible.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ecommerce.products.tests.test_forms">
+<span id="ecommerce-products-tests-test-forms-module"></span><h2>ecommerce.products.tests.test_forms module<a class="headerlink" href="#module-ecommerce.products.tests.test_forms" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-ecommerce.products.tests.test_models">
+<span id="ecommerce-products-tests-test-models-module"></span><h2>ecommerce.products.tests.test_models module<a class="headerlink" href="#module-ecommerce.products.tests.test_models" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_models.TestAttributeModels">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">TestAttributeModels</span></span><a class="headerlink" href="#ecommerce.products.tests.test_models.TestAttributeModels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_models.TestAttributeModels.test_attribute_str">
+<span class="sig-name descname"><span class="pre">test_attribute_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Product" title="ecommerce.products.models.Product"><span class="pre">Product</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_models.TestAttributeModels.test_attribute_str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_models.TestBrandModels">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">TestBrandModels</span></span><a class="headerlink" href="#ecommerce.products.tests.test_models.TestBrandModels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_models.TestBrandModels.test_brand_str">
+<span class="sig-name descname"><span class="pre">test_brand_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">brand</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Brand" title="ecommerce.products.models.Brand"><span class="pre">Brand</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_models.TestBrandModels.test_brand_str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_models.TestCategoryModels">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">TestCategoryModels</span></span><a class="headerlink" href="#ecommerce.products.tests.test_models.TestCategoryModels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_models.TestCategoryModels.test_category_str">
+<span class="sig-name descname"><span class="pre">test_category_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Category" title="ecommerce.products.models.Category"><span class="pre">Category</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_models.TestCategoryModels.test_category_str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_models.TestProductAttributeModels">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">TestProductAttributeModels</span></span><a class="headerlink" href="#ecommerce.products.tests.test_models.TestProductAttributeModels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_models.TestProductAttributeModels.test_product_attribute_str">
+<span class="sig-name descname"><span class="pre">test_product_attribute_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.ProductAttribute" title="ecommerce.products.models.ProductAttribute"><span class="pre">ProductAttribute</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_models.TestProductAttributeModels.test_product_attribute_str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_models.TestProductImageModels">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">TestProductImageModels</span></span><a class="headerlink" href="#ecommerce.products.tests.test_models.TestProductImageModels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_models.TestProductImageModels.test_product_image_str">
+<span class="sig-name descname"><span class="pre">test_product_image_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_image</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.ProductImage" title="ecommerce.products.models.ProductImage"><span class="pre">ProductImage</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_models.TestProductImageModels.test_product_image_str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_models.TestProductLineModels">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">TestProductLineModels</span></span><a class="headerlink" href="#ecommerce.products.tests.test_models.TestProductLineModels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_models.TestProductLineModels.test_product_line_str">
+<span class="sig-name descname"><span class="pre">test_product_line_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_line</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.ProductLine" title="ecommerce.products.models.ProductLine"><span class="pre">ProductLine</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_models.TestProductLineModels.test_product_line_str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_models.TestProductModels">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.test_models.</span></span><span class="sig-name descname"><span class="pre">TestProductModels</span></span><a class="headerlink" href="#ecommerce.products.tests.test_models.TestProductModels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_models.TestProductModels.test_product_str">
+<span class="sig-name descname"><span class="pre">test_product_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Product" title="ecommerce.products.models.Product"><span class="pre">Product</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_models.TestProductModels.test_product_str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ecommerce.products.tests">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ecommerce.products.tests" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo-bar.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="../index.html">Django DRF E-Commerce</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ecommerce.html">ecommerce package</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">Reference</a><ul>
+  <li><a href="ecommerce.html">ecommerce package</a><ul>
+  <li><a href="ecommerce.products.html">ecommerce.products package</a><ul>
+      <li>Previous: <a href="ecommerce.products.migrations.html" title="previous chapter">ecommerce.products.migrations package</a></li>
+      <li>Next: <a href="ecommerce.users.html" title="next chapter">ecommerce.users package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Vinicius Cadore.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.1.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="../_sources/api/ecommerce.products.tests.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

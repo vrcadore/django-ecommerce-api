@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Usage</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/design-tabs.js"></script>
+    <link rel="icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Contributing" href="contributing.html" />
+    <link rel="prev" title="Getting Started" href="getting_started.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
+<p>This document is for users who are editing this project for their own purposes and would like to add their own pipelines. If you are looking to contribute to the open source templates themselves, please refer to <a class="reference internal" href="#CONTRIBUTING.md"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">CONTRIBUTING</span></code></span></a>.</p>
+</section>
+<section id="how-to-add-a-django-app">
+<h2>How to add a Django App<a class="headerlink" href="#how-to-add-a-django-app" title="Permalink to this heading">¶</a></h2>
+<section id="folder-structure">
+<h3>Folder structure<a class="headerlink" href="#folder-structure" title="Permalink to this heading">¶</a></h3>
+<p>Add your new Django app as a folder under the <code class="docutils literal notranslate"><span class="pre">ecommerce</span></code> directory. Within your new Django app folder you should have the following files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">admin.py</span></code> - This file is used to register your models with the Django admin site. You can read more about this <a class="reference external" href="https://docs.djangoproject.com/en/3.2/ref/contrib/admin/">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apps.py</span></code> - This file is used to configure your app. You can read more about this <a class="reference external" href="https://docs.djangoproject.com/en/3.2/ref/applications/">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">models.py</span></code> - This file is used to define your models. You can read more about this <a class="reference external" href="https://docs.djangoproject.com/en/3.2/topics/db/models/">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">api/serializers.py</span></code> - This file is used to define your serializers. You can read more about this <a class="reference external" href="https://www.django-rest-framework.org/api-guide/serializers/">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">api/views.py</span></code> - This file is used to define your views. You can read more about this <a class="reference external" href="https://www.django-rest-framework.org/api-guide/views/">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">urls.py</span></code> - This file is used to define your urls. You can read more about this <a class="reference external" href="https://docs.djangoproject.com/en/3.2/topics/http/urls/">here</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tests/</span></code> - This folder is used to define your tests. You can read more about this <a class="reference external" href="https://docs.djangoproject.com/en/3.2/topics/testing/overview/">here</a>.</p></li>
+</ul>
+</section>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">¶</a></h2>
+<p>Please refer to <a class="reference internal" href="#CONTRIBUTING.md#Testing"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">CONTRIBUTING.md</span></code></span></a> for information on how to write both unit and end-to-end (E2E) pipeline tests for your pipeline. It is advisable to check that your pipelines pass all tests before being shared with others.</p>
+<section id="migrating">
+<h3>Migrating<a class="headerlink" href="#migrating" title="Permalink to this heading">¶</a></h3>
+<p>To migrate your database, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>py<span class="w"> </span>manage.py<span class="w"> </span>migrate
+</pre></div>
+</div>
+<p>This will create the database tables for your Django app. You can also use this command to update your database tables if you make any changes to your models.</p>
+</section>
+<section id="populating">
+<h3>Populating<a class="headerlink" href="#populating" title="Permalink to this heading">¶</a></h3>
+<p>To populate your database with some fake data, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>py<span class="w"> </span>manage.py<span class="w"> </span>populate_db
+</pre></div>
+</div>
+<p>This command will create a many entries in the database. It also will create a superuser with the following credentials. To edit this command, please refer to <a class="reference internal" href="#ecommerce/core/management/commands/populate_db.py"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">ecommerce/core/management/commands/populate_db.py</span></code></span></a>.</p>
+</section>
+<section id="running">
+<h3>Running<a class="headerlink" href="#running" title="Permalink to this heading">¶</a></h3>
+<p>To run your Django API project, run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>py<span class="w"> </span>manage.py<span class="w"> </span>runserver
+</pre></div>
+</div>
+<p>This will start the Django development server. You can access the admin panel at <code class="docutils literal notranslate"><span class="pre">http://localhost:8000/admin/</span></code> and the API at <code class="docutils literal notranslate"><span class="pre">http://localhost:8000/api/</span></code>. You also can access the API documentation at <code class="docutils literal notranslate"><span class="pre">http://localhost:8000/api/docs/</span></code>.</p>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo-bar.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="index.html">Django DRF E-Commerce</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-add-a-django-app">How to add a Django App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing">Testing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/modules.html">Reference</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="getting_started.html" title="previous chapter">Getting Started</a></li>
+      <li>Next: <a href="contributing.html" title="next chapter">Contributing</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Vinicius Cadore.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.1.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/usage.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
