@@ -338,6 +338,61 @@
 <section id="module-ecommerce.products.tests.test_admin">
 <span id="ecommerce-products-tests-test-admin-module"></span><h2>ecommerce.products.tests.test_admin module<a class="headerlink" href="#module-ecommerce.products.tests.test_admin" title="Permalink to this heading">¶</a></h2>
 <dl class="py class">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestAttributeAdmin">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.test_admin.</span></span><span class="sig-name descname"><span class="pre">TestAttributeAdmin</span></span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestAttributeAdmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Test cases for Attribute Administration Pages and Actions.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestAttributeAdmin.test_add">
+<span class="sig-name descname"><span class="pre">test_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestAttributeAdmin.test_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the add page is accessible.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestAttributeAdmin.test_changelist">
+<span class="sig-name descname"><span class="pre">test_changelist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestAttributeAdmin.test_changelist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the changelist page is accessible.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestAttributeAdmin.test_delete">
+<span class="sig-name descname"><span class="pre">test_delete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Attribute" title="ecommerce.products.models.Attribute"><span class="pre">Attribute</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestAttributeAdmin.test_delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the delete page is not accessible.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestAttributeAdmin.test_edit">
+<span class="sig-name descname"><span class="pre">test_edit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Attribute" title="ecommerce.products.models.Attribute"><span class="pre">Attribute</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestAttributeAdmin.test_edit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the edit page is accessible.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestAttributeAdmin.test_make_active">
+<span class="sig-name descname"><span class="pre">test_make_active</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Attribute" title="ecommerce.products.models.Attribute"><span class="pre">Attribute</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.users.html#ecommerce.users.models.User" title="ecommerce.users.models.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestAttributeAdmin.test_make_active" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the make_active action is working.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestAttributeAdmin.test_make_inactive">
+<span class="sig-name descname"><span class="pre">test_make_inactive</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Attribute" title="ecommerce.products.models.Attribute"><span class="pre">Attribute</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">admin_user</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.users.html#ecommerce.users.models.User" title="ecommerce.users.models.User"><span class="pre">User</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestAttributeAdmin.test_make_inactive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the make_inactive action is working.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestAttributeAdmin.test_search">
+<span class="sig-name descname"><span class="pre">test_search</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestAttributeAdmin.test_search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the search is working.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestAttributeAdmin.test_view_page">
+<span class="sig-name descname"><span class="pre">test_view_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Attribute" title="ecommerce.products.models.Attribute"><span class="pre">Attribute</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestAttributeAdmin.test_view_page" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the view page is accessible.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestBrandAdmin">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ecommerce.products.tests.test_admin.</span></span><span class="sig-name descname"><span class="pre">TestBrandAdmin</span></span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestBrandAdmin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.7/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
@@ -385,8 +440,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestBrandAdmin.test_view_user">
-<span class="sig-name descname"><span class="pre">test_view_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brand</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Brand" title="ecommerce.products.models.Brand"><span class="pre">Brand</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestBrandAdmin.test_view_user" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestBrandAdmin.test_view_page">
+<span class="sig-name descname"><span class="pre">test_view_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brand</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Brand" title="ecommerce.products.models.Brand"><span class="pre">Brand</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestBrandAdmin.test_view_page" title="Permalink to this definition">¶</a></dt>
 <dd><p>Test that the view page is accessible.</p>
 </dd></dl>
 
@@ -440,8 +495,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestCategoryAdmin.test_view_user">
-<span class="sig-name descname"><span class="pre">test_view_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Category" title="ecommerce.products.models.Category"><span class="pre">Category</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestCategoryAdmin.test_view_user" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestCategoryAdmin.test_view_page">
+<span class="sig-name descname"><span class="pre">test_view_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Category" title="ecommerce.products.models.Category"><span class="pre">Category</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestCategoryAdmin.test_view_page" title="Permalink to this definition">¶</a></dt>
 <dd><p>Test that the view page is accessible.</p>
 </dd></dl>
 
@@ -495,8 +550,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestProductAdmin.test_view_user">
-<span class="sig-name descname"><span class="pre">test_view_user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Product" title="ecommerce.products.models.Product"><span class="pre">Product</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestProductAdmin.test_view_user" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="ecommerce.products.tests.test_admin.TestProductAdmin.test_view_page">
+<span class="sig-name descname"><span class="pre">test_view_page</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">admin_client</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="ecommerce.products.html#ecommerce.products.models.Product" title="ecommerce.products.models.Product"><span class="pre">Product</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ecommerce.products.tests.test_admin.TestProductAdmin.test_view_page" title="Permalink to this definition">¶</a></dt>
 <dd><p>Test that the view user page is accessible.</p>
 </dd></dl>
 
